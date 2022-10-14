@@ -42,8 +42,10 @@ function reset(){
   motATrouver = "";
   cache = "";
   nouvellePartie();
-  keyboard.style.visibility = "visible";
+  keyboard.style.display = "block";
   end.style.visibility = "hidden";
+  nbEssai = 1;
+  img.src = "img/1.png";
 }
 
 
@@ -100,7 +102,7 @@ function essayer(){
   if(nbEssai == nbEssaiMax-1){
     gagne = false;
     end.innerText = "Vous avez perdu, le mot à trouver était : " + motATrouver;
-    keyboard.style.visibility = "hidden";
+    keyboard.style.display = "none";
     end.style.visibility = "visible";
     retry.style.visibility = "visible";
   }
@@ -108,7 +110,7 @@ function essayer(){
   if(motATrouver == cache){
     gagne = true;
     end.innerText = "Vous avez gagné, bien le bravo !";
-    keyboard.style.visibility = "hidden";
+    keyboard.style.display = "none";
     end.style.visibility = "visible";
     retry.style.visibility = "visible";
   }
