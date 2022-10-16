@@ -31,7 +31,7 @@ function nouvellePartie(){
   motATrouver = setMotATrouver();
   setCache(motATrouver);
   setImage();
-  retry.style.visibility = "hidden";
+  retry.style.display = "none";
 }
 
 function reset(){
@@ -43,7 +43,7 @@ function reset(){
   cache = "";
   nouvellePartie();
   keyboard.style.display = "block";
-  end.style.visibility = "hidden";
+  end.style.display= "none";
   nbEssai = 1;
   img.src = "img/1.png";
 }
@@ -103,16 +103,16 @@ function essayer(){
     gagne = false;
     end.innerText = "Vous avez perdu, le mot à trouver était : " + motATrouver;
     keyboard.style.display = "none";
-    end.style.visibility = "visible";
-    retry.style.visibility = "visible";
+    end.style.display = "block";
+    retry.style.display = "block";
   }
 
   if(motATrouver == cache){
     gagne = true;
     end.innerText = "Vous avez gagné, bien le bravo !";
     keyboard.style.display = "none";
-    end.style.visibility = "visible";
-    retry.style.visibility = "visible";
+    end.style.display = "block";
+    retry.style.display = "block";
   }
   console.log("lettre = " + x + " mot = " + motATrouver + " cache = " + cache);
   cacheDiv.innerText = cache ;

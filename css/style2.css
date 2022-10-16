@@ -7,6 +7,7 @@ html,body{
   background-repeat: repeat;
   background-size: 100% ;
   font-family: "Gloria Hallelujah";
+  font-size: 4vh;
 }
 
 h1{
@@ -24,28 +25,45 @@ h1{
 
 #leftSide{
   flex-grow: 1;
-  border-bottom: solid 2px red;
+  display : flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #image{
+  margin: 3vh;
   display: flex;
   justify-content: center;
 }
 
 #image>img{
   border-radius: 25px;
-  padding: 1vw;
   width: 60vw;
   justify-content: center;
   max-width: 60vw;
+  outline: 11px solid #fdc8c8;
+  -moz-outline-radius: 40px ;
 }
 
+#keyboard{
+  flex-flow : row wrap;
+  flex-wrap: wrap;
+  margin-top :5vh;
+  margin-left: 7vw;
+  margin-right: 7vw;
+  border-radius: 11px;
+}
+
+#keyboard>input{
+  justify-content: center;
+}
 
 #cache{
   text-align: center;
   letter-spacing: 4vw;
   background-color: white;
   border-radius: 11px;
+  margin-top: 10vh;
   margin-left: 10vw;
   margin-right: 10vw;
 }
@@ -53,11 +71,11 @@ h1{
 #end{
   background-color: white;
   border-radius: 11px;
-  font-size: 10vw;
   text-align: center;
   margin-left: 10vw;
   margin-right: 10vw;
 }
+
 
 
 @media (min-width: 1024px) {
@@ -69,8 +87,42 @@ h1{
   #leftSide{
     height: 100%;
     flex-grow: 1;
-    border: solid 4px red;
-    box-sizing: border-box;
+    align-items: center;
+    justify-content: center ;
+  }
+
+  #cache{
+    margin-bottom: 6vh;
+    font-size: 5vh;
+  }
+
+
+  #end{
+    background-color: white;
+    border-radius: 11px;
+    font-size: 4vh;
+    text-align: center;
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+
+  #keyboard{
+    flex-flow : row wrap;
+    flex-wrap: wrap;
+    margin-left: 7vw;
+    margin-right: 7vw;
+    border-radius: 11px;
+  }
+
+  #keyboard>input {
+    width: 7vh;
+    height: 7vh;
+    font-size: 5vh;
+  }
+
+  #retry{
+    margin-top: 6vh;
+    font-size: 5vh;
   }
 
   #image>img{
